@@ -1,0 +1,282 @@
+/* =========================
+   서비스 페이지 공통 스타일
+   ========================= */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #222;
+  background-color: #f5f5f5;
+}
+
+/* 앵커 스크롤 보정 (nav에서 #targetSection-3 이동 시) */
+#targetSection-3 {
+  scroll-margin-top: 80px;
+}
+
+/* 메인 레이아웃 */
+.service-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 16px 60px;
+}
+
+/* =========================
+   상단 인트로
+   ========================= */
+
+.service-hero {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.service-hero-label {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff2e8;
+  color: #ff7a00;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-hero-title {
+  font-size: 2.1rem;
+  line-height: 1.4;
+  margin: 0 0 10px;
+  font-weight: 800;
+}
+
+.service-hero-desc {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* =========================
+   카드 리스트 영역
+   ========================= */
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* 기본 카드 레이아웃 */
+.service-card {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+  padding: 22px 22px;
+}
+
+/* 이미지 영역 */
+.service-card__media {
+  flex: 0 0 32%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-photo {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.service-photo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+/* 텍스트 영역 */
+.service-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 뱃지 / 제목 / 서브타이틀 */
+.service-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #f3f4ff;
+  color: #4f46e5;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.service-title {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.service-subtitle {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* 태그들 */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.service-tags span {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fff4ea;
+  color: #ff7a00;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* 본문 설명 */
+.service-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* =========================
+   카드별 컬러 포인트
+   ========================= */
+
+.service-card--eye .service-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.service-card--device .service-badge {
+  background: #e0f7f3;
+  color: #047857;
+}
+
+.service-card--report .service-badge {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.service-card--infra .service-badge {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.service-card--radon .service-badge {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+/* 라돈 카드 배경 살짝 톤 변경
+.service-card--radon {
+  background: #f8f5ff;
+} */
+
+/* =========================
+   반응형 : 태블릿 / 모바일
+   ========================= */
+
+/* 1024px 이하: 카드 간 간격 조정 */
+@media (max-width: 1024px) {
+  .service-main {
+    padding: 70px 14px 50px;
+  }
+
+  .service-card {
+    padding: 20px 18px;
+  }
+}
+
+/* 768px 이하: 세로형 카드로 변경 */
+@media (max-width: 768px) {
+  .service-main {
+    padding: 60px 12px 40px;
+  }
+
+  .service-hero {
+    text-align: center;
+  }
+
+  .service-hero-title {
+    font-size: 1.7rem;
+  }
+
+  .service-hero-desc {
+    font-size: 0.95rem;
+  }
+
+  .service-card {
+    flex-direction: column;
+    padding: 18px 14px;
+  }
+
+  .service-card__media {
+    flex: 0 0 auto;
+    order: 0;
+  }
+
+  .service-card__body {
+    order: 1;
+  }
+
+  .service-photo {
+    max-width: 100%;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  }
+
+  .service-photo__img {
+    max-height: 220px;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+  }
+
+  .service-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+  }
+
+  .service-tags span {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+}
+
+/* 480px 이하: 살짝 더 컴팩트하게 */
+@media (max-width: 480px) {
+  .service-main {
+    padding-top: 56px;
+  }
+
+  .service-hero-title {
+    font-size: 1.55rem;
+  }
+
+  .service-card {
+    padding: 16px 12px;
+  }
+}

@@ -1,0 +1,207 @@
+body {
+    margin: 0px;
+}
+
+.navbar {
+    border-bottom: 2px solid #e5e7eb;
+    background-color: #FFFFFF;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+    padding: 0px 30px;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar_menu li {
+    padding: 20px 20px;
+    margin: 0px;
+    position: relative;  /* 드롭다운 메뉴를 위한 설정 */
+    transition: 0.5s;
+}
+
+.navbar_menu li:hover {
+    background-color: #FF8224;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.navbar_menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* Dropdown_menu */
+.dropdown_menu li:hover{
+    background-color: #ffa45f;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.navbar_menu li:hover a {
+    font-size: 16.3px;
+}
+
+.navbar_menu .dropdown:hover .dropdown_menu {
+    display: block; /* 드롭다운 메뉴 보이게 하기 */
+    list-style: none;
+}
+
+.dropdown_menu {
+    display: none;  /* 기본적으로 드롭다운 메뉴는 숨김 */
+    position: absolute;
+    top: 100%;  /* 메뉴 항목 아래에 표시 */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    z-index: 1000;
+    border-radius: 4px;  /* 메뉴의 모서리를 둥글게 처리 */
+    box-sizing: border-box;  /* padding과 border를 크기 계산에 포함시킴 */
+    padding: 0px;  /* 불필요한 여백 제거 */
+}
+
+.dropdown_menu li:last-child {
+    border-bottom: none;  /* 마지막 항목의 구분선 제거 */
+}
+
+.dropdown_menu li {
+    padding: 0px 0px;  /* 항목 내 여백 설정 */
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;  /* 항목 간 구분선 */
+    padding: 10px;
+}
+
+.dropdown_menu li a {
+    color: black;
+    text-decoration: none;
+    display: block;  /* 링크가 블록 요소로 처리되게 해서 클릭 범위 확대 */
+}
+
+.navbar_icons {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar_icons li {
+    padding: 0px 15px;
+}
+
+.kakao,
+.soomgo {
+    border-radius: 30%;
+    list-style: none;
+}
+
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.h1-wrap {
+    display: flex;
+    justify-content: center;  /* 가로 중앙 */
+    align-items: center;      /* 세로 중앙 */
+    gap: 12px;
+}
+
+.h1-wrap h1 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+.apt_h1 {
+    font-size: 16px;
+    color: #FF5E00;
+    margin: 0;
+    
+}
+
+h1 {
+    font-size: 16px;
+    color: gray;
+    margin: 0;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+/* FAQ 스타일 */
+.faq {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.faq-item {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #f0f0f0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    font-size: 18px;
+    color: #777;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* 활성화된 상태 */
+.faq-answer.active {
+    max-height: 250px; /* 최대 높이 */
+    padding: 15px;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+
+
+
+#targetSection-5 {
+    margin-top: 75px;
+    padding-top: 75px;
+}

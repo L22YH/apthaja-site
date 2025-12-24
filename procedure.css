@@ -1,0 +1,384 @@
+/* =========================
+   Procedure Page Style
+   ========================= */
+
+:root {
+  --proc-ink: #0f172a;
+  --proc-muted: #475569;
+  --proc-line: #e2e8f0;
+  --proc-accent: #ff7a00;
+  --proc-bg: #f7f8fb;
+  --proc-card: #ffffff;
+  --proc-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--proc-ink);
+}
+
+.procedure-page {
+  background: #ffffff;
+}
+
+.procedure-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  margin: 0 0 12px;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+.procedure-hero {
+  position: relative;
+  padding: 96px 20px 72px;
+  background: radial-gradient(circle at top left, #fff1df 0%, #ffffff 55%, #f1f5f9 100%);
+  overflow: hidden;
+}
+
+.procedure-hero::after {
+  content: "";
+  position: absolute;
+  left: -140px;
+  top: 60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 122, 0, 0.18), rgba(255, 122, 0, 0));
+  pointer-events: none;
+}
+
+.procedure-hero-inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 40px;
+  align-items: center;
+  z-index: 1;
+}
+
+.procedure-hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 16px;
+  line-height: 1.35;
+}
+
+.procedure-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--proc-muted);
+  margin: 0 0 24px;
+}
+
+.procedure-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: var(--proc-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(255, 122, 0, 0.25);
+}
+
+.btn-primary:hover {
+  background: #ff8f2b;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid #cbd5f5;
+  background: #ffffff;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.btn-outline:hover {
+  border-color: #94a3b8;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1);
+  transform: translateY(-1px);
+}
+
+.procedure-hero-panel {
+  background: var(--proc-card);
+  border: 1px solid var(--proc-line);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: var(--proc-shadow);
+}
+
+.procedure-hero-panel h2 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.procedure-hero-panel ul {
+  margin: 0;
+  padding: 0 0 0 18px;
+  color: var(--proc-muted);
+  line-height: 1.6;
+}
+
+.panel-label {
+  color: var(--proc-accent);
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.panel-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.panel-metrics span {
+  background: #fff7ed;
+  color: #c2410c;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* =========================
+   Steps
+   ========================= */
+
+.procedure-steps {
+  padding: 70px 20px 90px;
+  background: var(--proc-bg);
+}
+
+.procedure-section-head {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+.procedure-section-head h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.procedure-section-head p {
+  margin: 0;
+  color: var(--proc-muted);
+  line-height: 1.7;
+}
+
+.step-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+  position: relative;
+}
+
+.step-grid::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.card {
+  position: relative;
+  background: var(--proc-card);
+  border-radius: 16px;
+  border: 1px solid var(--proc-line);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 26px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 2px solid #cbd5f5;
+  z-index: 2;
+}
+
+.card.active::before {
+  background: var(--proc-accent);
+  border-color: var(--proc-accent);
+}
+
+.card-button {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 22px 22px 22px 64px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-button::after {
+  content: "+";
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid var(--proc-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.card.active .card-button::after {
+  content: "-";
+  background: #fff7ed;
+  border-color: #ffedd5;
+  color: #c2410c;
+}
+
+.step-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.14em;
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--proc-ink);
+}
+
+.card-description {
+  display: none;
+  padding: 0 22px 22px 64px;
+  color: var(--proc-muted);
+  line-height: 1.7;
+}
+
+.card-description p {
+  margin: 0 0 16px;
+}
+
+.card.active .card-description {
+  display: block;
+}
+
+.step-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.step-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: var(--proc-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(255, 122, 0, 0.22);
+}
+
+.step-cta--ghost {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #cbd5f5;
+  box-shadow: none;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 1024px) {
+  .procedure-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .step-grid::before {
+    left: 20px;
+  }
+
+  .card-button {
+    padding-left: 56px;
+  }
+
+  .card-description {
+    padding-left: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .procedure-hero {
+    padding: 80px 16px 60px;
+  }
+
+  .procedure-hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .procedure-section-head {
+    text-align: left;
+  }
+
+  .step-grid::before {
+    left: 16px;
+  }
+
+  .card::before {
+    left: 14px;
+  }
+
+  .card-button {
+    padding: 18px 18px 18px 48px;
+  }
+
+  .card-description {
+    padding: 0 18px 18px 48px;
+  }
+}

@@ -1,0 +1,70 @@
+<!-- nav.html -->
+<nav id="siteNav" class="site-nav">
+  <div class="nav-inner">
+    <!-- 로고 -->
+    <a href="index.html" class="nav-logo" aria-label="아팟하자 메인으로 이동">
+      <img src="./icon/logo.png" alt="아팟하자 로고">
+    </a>
+
+    <!-- 모바일 햄버거 -->
+    <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- 메인 메뉴 -->
+    <ul class="nav-menu">
+      <li class="nav-item nav-has-children">
+        <button type="button" class="nav-link nav-parent">
+          아팟하자 소개
+        </button>
+        <ul class="nav-sub">
+          <li><a href="introduction.html" class="nav-link">회사 소개</a></li>
+          <li><a href="introduction.html#targetSection-2" class="nav-link">2025년 실적</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item nav-has-children">
+        <button type="button" class="nav-link nav-parent">
+          사전점검 서비스
+        </button>
+        <ul class="nav-sub">
+          <li><a href="procedure.html" class="nav-link">예약 및 서비스 절차</a></li>
+          <li><a href="service.html#targetSection-3" class="nav-link">점검 서비스</a></li>
+          <li><a href="report.html#targetSection-4" class="nav-link">결과보고서</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a href="question.html#targetSection-5" class="nav-link">자주하는 질문</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html#targetSection-1" class="nav-link">상담/예약 신청</a>
+      </li>
+    </ul>
+
+    <!-- 우측 액션 / 아이콘 -->
+    <div class="nav-actions">
+      <a href="tel:010-5925-4558" class="nav-phone">
+        <span class="nav-phone-label">상담문의</span>
+        <span class="nav-phone-number">010-5925-4558</span>
+      </a>
+      <div class="nav-icons">
+      <a href="https://open.kakao.com/o/sh65ajZg" class="nav-icon" aria-label="카카오톡 채널" target="_blank" rel="noopener">
+        <img src="./icon/kakao.png" alt="카카오톡">
+      </a>
+
+
+
+        <a href="https://soomgo.com/profile/users/14967743"
+           class="nav-icon" aria-label="숨고 프로필" target="_blank" rel="noopener">
+          <img src="./icon/soomgo.png" alt="숨고">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모바일에서 배경 어둡게 -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+</nav>

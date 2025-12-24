@@ -1,0 +1,487 @@
+/* =========================
+   메인 공통
+   ========================= */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #222;
+}
+
+/* 공통 버튼 */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: #ff7a00;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(255, 122, 0, 0.25);
+}
+
+.btn-primary:hover {
+  background: #ff8f2b;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background: #ddd;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-text {
+  border: none;
+  background: none;
+  color: #555;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  position: relative;
+  background: radial-gradient(circle at top left, #ffeddb 0, #ffffff 65%, #f5f5f5 100%);
+  border-bottom: 1px solid #eee;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 16px 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.hero-label {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff2e8;
+  color: #ff7a00;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  margin: 0 0 12px;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.hero-desc {
+  margin: 0 0 20px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.hero-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hero-kpi {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.hero-kpi-num {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.hero-kpi-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-cta {
+  padding-inline: 22px;
+}
+
+.hero-call {
+  color: #444;
+}
+
+/* 오른쪽 카드 */
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   HERO 우측 안내 카드 (리뉴얼)
+   ========================= */
+
+.hero-card {
+  width: 100%;
+  max-width: 450px;
+  background: #fff;                         /* 🔥 밝은 화이트 */
+  color: #333;
+  border-radius: 18px;
+  padding: 22px 20px 20px; 
+  box-shadow: 0 10px 30px rgba(255, 140, 60, 0.15); /* 🔥 오렌지톤 그림자 */
+  border: 1px solid #ffe0c2;                /* 🔥 옅은 오렌지 라인 */
+  margin-left: 10px;
+}
+
+.hero-card-title {
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ff7a00;                           /* 🔥 오렌지 포인트 */
+}
+
+.hero-card-list {
+  padding-left: 18px;
+  margin: 0 0 14px;
+}
+
+.hero-card-list li {
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.hero-card-bottom {
+  font-size: 0.88rem;
+  color: #555;
+  margin: 0;
+}
+
+
+/* =========================
+   모바일 버전에서는 우측 안내 카드 삭제
+   ========================= */
+@media (max-width: 768px) {
+  .hero-card {
+    display: none !important;
+  }
+}
+
+
+
+/* =========================
+   서비스 카드 섹션
+   ========================= */
+
+.home-services {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.home-services-header {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 16px 10px;
+  text-align: center;
+}
+
+.home-services-header p {
+  margin: 0 0 6px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.home-services-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.home-services-header h2 span {
+  color: #ff7a00;
+}
+
+/* 기존 container-1-1 재활용 */
+.home-services-grid {
+  max-width: 1120px;
+  margin: 0 auto 40px;
+  padding: 0 16px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.home-service-card {
+  border-radius: 18px;
+  background: #f9fafb;
+  border: 1px solid #edf2f7;
+  padding: 16px 16px 18px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.home-service-img-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.home-service-img-wrap img {
+  display: block;
+  width: 100%;
+  height: 230px;        /* 하단 카드 이미지 높이 */
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.home-service-tag {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #fff;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.home-service-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.home-service-card p {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.home-service-card button {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #111827;
+  color: #f9fafb;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.home-service-card button:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   메인 #1 카드 (PC 화면용)
+   ========================= */
+@media (min-width: 1024px) {
+  .container-1-1 {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .container-1-1 .card {
+    flex: 0 0 400px;      /* 🔥 카드 자체 폭 줄이기 */
+    max-width: 400px;
+  }
+
+  .container-1-1 .card img {
+    height: 230px;        /* 세로 조금 늘려서 정사각형 느낌 */
+    object-fit: cover;
+  }
+}
+
+
+/* =========================
+   상담 / 예약 섹션
+   ========================= */
+
+.home-reserve {
+  background: #0f172a;
+  color: #f9fafb;
+  padding: 50px 0 60px;
+}
+
+.home-reserve-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.home-reserve-text h2 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.home-reserve-text p {
+  margin: 0 0 12px;
+  font-size: 0.98rem;
+  color: #e5e7eb;
+}
+
+.home-reserve-text ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.home-reserve-text li {
+  margin-bottom: 6px;
+}
+
+.home-reserve-form-wrap {
+  background: #111827;
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.5);
+}
+
+.home-reserve-form label {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.home-reserve-form .form-control,
+.home-reserve-form .form-select {
+  font-size: 0.9rem;
+}
+
+/* 개인정보 동의 */
+.agree-row {
+  margin-top: 4px;
+}
+
+.agree-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.agree-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.agree-help {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.form-result-text {
+  font-size: 0.9rem;
+}
+
+/* =========================
+   반응형
+   ========================= */
+
+/* 태블릿 이하 */
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 70px;
+  }
+
+  .hero-right {
+    order: -1;
+  }
+
+  .hero-card {
+    max-width: 100%;
+  }
+
+  .home-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-reserve-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 60px 14px 40px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-services-header {
+    padding: 34px 14px 8px;
+  }
+
+  .home-services-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-services-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home-reserve {
+    padding: 40px 0 50px;
+  }
+
+  .home-reserve-inner {
+    padding-inline: 14px;
+  }
+
+  .home-service-img-wrap img {
+    height: 200px;    
+  }
+}
+
+/* 아주 작은 모바일 */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-kpi-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

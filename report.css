@@ -1,0 +1,321 @@
+/* =========================
+   기본 세팅
+   ========================= */
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #222;
+  background-color: #f5f5f5;
+}
+
+/* NAV에서 #targetSection-4 링크로 올 때 위치 보정 */
+#targetSection-4 {
+  scroll-margin-top: 80px;
+}
+
+/* 메인 컨테이너 */
+.report-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 16px 60px;
+}
+
+/* =========================
+   상단 인트로 영역
+   ========================= */
+
+.report-hero {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.report-hero-label {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #fff2e8;
+  color: #ff7a00;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.report-hero-title {
+  margin: 0 0 10px;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.report-hero-desc {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* =========================
+   레이아웃: 요약 + 대표 이미지
+   ========================= */
+
+.report-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.report-section-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.report-section-desc {
+  margin: 0 0 16px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* 체크리스트 */
+.report-checklist {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.report-checklist li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.report-checklist li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 0.8rem;
+  color: #16a34a;
+}
+
+/* 대표 이미지 영역 */
+.report-main-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.report-main-image {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+
+.report-main-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.report-main-note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* =========================
+   보고서 구성 카드들
+   ========================= */
+
+.report-feature-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.report-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.report-card-title {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.report-card-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* =========================
+   갤러리
+   ========================= */
+
+.report-gallery {
+  margin-top: 10px;
+}
+
+.report-gallery-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.report-gallery-desc {
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 갤러리 그리드 */
+.report-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.report-thumb {
+  border: none;
+  padding: 0;
+  background: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  cursor: default; /* 나중에 클릭 확대 기능 넣으면 pointer로 변경 */
+}
+
+.report-thumb img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.report-thumb:hover img {
+  transform: scale(1.03);
+  filter: brightness(1.02);
+}
+
+/* =========================
+   반응형
+   ========================= */
+
+/* 태블릿 이하 */
+@media (max-width: 1024px) {
+  .report-main {
+    padding: 70px 14px 50px;
+  }
+
+  .report-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .report-main-preview {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .report-feature-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .report-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .report-main {
+    padding: 60px 12px 40px;
+  }
+
+  .report-hero {
+    text-align: center;
+  }
+
+  .report-hero-title {
+    font-size: 1.7rem;
+  }
+
+  .report-hero-desc {
+    font-size: 0.95rem;
+  }
+
+  .report-gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .report-thumb img {
+    height: auto;
+  }
+}
+
+/* 아주 작은 모바일 */
+@media (max-width: 480px) {
+  .report-main {
+    padding-top: 56px;
+  }
+
+  .report-hero-title {
+    font-size: 1.55rem;
+  }
+}
+
+
+/* =========================
+   이미지 확대 모달
+   ========================= */
+
+.img-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+  z-index: 9999;
+}
+
+.img-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.img-modal img {
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 12px;
+  box-shadow: 0 10px 42px rgba(0,0,0,0.4);
+}
+
+/* 모바일 보정 */
+@media (max-width: 768px) {
+  .img-modal img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+}
